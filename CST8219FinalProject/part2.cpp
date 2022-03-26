@@ -8,8 +8,8 @@
 #include <crtdbg.h>
 #include <iostream>
 using namespace std;
-#include "Frame.h"
-#include "Animation.h"
+#include "framePart2.h"
+#include "animationPart2.h"
 
 int main(void)
 {
@@ -24,10 +24,10 @@ int main(void)
 		cin >> response;
 		switch (response)
 		{
-		case '1':A.InsertFrame(); break;
+		/*case '1':A.InsertFrame(); break;
 		case '2':A.DeleteFrame(); break;
 		case '3':A.EditFrame(); break;
-		case '4':A.ReportAnimation(); break;
+		case '4':A.ReportAnimation(); break;*/
 		case '5':RUNNING = false; break;
 		default:cout << "Please enter a valid option" << endl;
 		}
