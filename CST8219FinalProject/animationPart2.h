@@ -1,6 +1,6 @@
 //Animation.h
 //@author: Surbhi Bahri
-
+#include "framePart2.h"
 #pragma once
 
 class Animation
