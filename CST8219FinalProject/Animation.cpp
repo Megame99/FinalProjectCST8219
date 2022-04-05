@@ -6,6 +6,7 @@ using namespace std;
 
 Animation::Animation()
 {
+	char* fName;
 	string name;
 	cout << "Please enter the Animation Name" << endl;
 	while (!getline(cin, name))
@@ -17,11 +18,7 @@ Animation::Animation()
 	int n = name.length();
 	this->animationName = (char*)malloc(n);
 	this->frames = (Frame*)malloc(sizeof(Frame*));
-	this->frames->pNext = NULL;
-
-	
-	
-
+	this->frames->GetpNext() = NULL;	
 	/**frame->GetFrameName();*/
 	
 	strcpy(animationName, name.c_str());
@@ -51,14 +48,14 @@ void Animation::InsertFrame()
 	}
 	
 	int n = name.length();
-	temp->frameName = (char*)malloc(n);
-	strcpy(temp->frameName, name.c_str());
+	temp->GetFrameName() = (char*)malloc(n);
+	strcpy(temp->GetFrameName(), name.c_str());
 	
-	temp->pNext = frames;
+	temp->GetpNext() = frames;
 	frames = temp;
-	for (int i = 0; i < n; i++) {
-		cout << frames->frameName[i];
-	}
+	//for (int i = 0; i < n; i++) {
+	//	cout << frames->frameName[i];
+	//}
 }
 
 //
@@ -67,7 +64,7 @@ void Animation::DeleteFrame()
 {
 	getchar();
 
-	if (frames->frameName == NULL) {
+	if (frames->GetFrameName() == NULL) {
 		cout << "Animation is Empty" << endl;
 	}
 
@@ -75,14 +72,14 @@ void Animation::DeleteFrame()
 
 
 
-	while (current->pNext != NULL) {
-		if (current->pNext->pNext == NULL) {
+	while (current->GetpNext() != NULL) {
+		if (current->GetpNext()->GetpNext() == NULL) {
 			break;
 		}
-		current = current->pNext;
+		current = current->GetpNext();
 	}
 
-	current->pNext = NULL;
+	current->GetpNext() = NULL;
 }
 
 void Animation::ReportAnimation()
@@ -151,8 +148,8 @@ void Animation::EditFrame() {
 		cin.ignore(256, '\n');
 	}
 	int n = name.length();
-	current->frameName = (char*)realloc(current->frameName, n);
-	strcpy(current->frameName, name.c_str());
+	current->GetFrameName() = (char*)realloc(current->GetFrameName(), n);
+	strcpy(current->GetFrameName(), name.c_str());
 
 }
 
