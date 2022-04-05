@@ -1,17 +1,22 @@
 // Animation.h
 //@author: Surbhi Bahri
+#include "frame.h"
+#include <forward_list>
 #pragma once
-Class animation
+
+
+
+class animation
 {
 std::string animationName;
-std::forward_List<frame> frames;
+std::forward_list<frame> frames;
 public:
 animation(std::string name) :animationName(name) { }
 ~animation() { }
 void EditFrame();
 void DeleteFrame();
 // Add a frame as in cin>>A;
-friend std::istream& operator>>(std::istream&, Animation&);
+friend std::istream& operator>>(std::istream&, animation&);
 // Output the frames as in cout<<A;
-friend std::ostream& operator<<(std::ostream&, Animation&);
+friend std::ostream& operator<<(std::ostream&, animation&);
 };

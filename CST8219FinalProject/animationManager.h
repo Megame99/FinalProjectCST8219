@@ -1,9 +1,13 @@
 // AnimationManager.h
+#include <iostream>
+#include "Animation.h"
+#include "Frame.h"
+#include <vector>
 #pragma once
-Class AnimationManager
+class AnimationManager
 {
 std::string managerName;
-std::vector<Animation> animations;
+std::vector<animation> animations;
 public:
 AnimationManager(std::string name) :managerName(name) { }
 ~AnimationManager() { }
