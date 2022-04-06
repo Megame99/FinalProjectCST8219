@@ -1,6 +1,7 @@
 // Animation.h
 //@author: Surbhi Bahri
 #include "frame.h"
+#include <string>
 #include <forward_list>
 #pragma once
 
@@ -19,4 +20,5 @@ void DeleteFrame();
 friend std::istream& operator>>(std::istream&, animation&);
 // Output the frames as in cout<<A;
 friend std::ostream& operator<<(std::ostream&, animation&);
+
 };
