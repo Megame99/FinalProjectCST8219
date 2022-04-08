@@ -1,7 +1,6 @@
 // AnimationManager.h
 #include <iostream>
 #include "Animation.h"
-#include "Frame.h"
 #include <vector>
 #pragma once
 class AnimationManager

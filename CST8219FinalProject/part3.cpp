@@ -1,6 +1,7 @@
 // part3.cpp
 //@author: Surbhi Bahri
-#define _CRT_SECURE_NO_WARNINGS#define _CRTDBG_MAP_ALLOC // need this to get the line identification
+#define _CRT_SECURE_NO_WARNINGS
+#define _CRTDBG_MAP_ALLOC // need this to get the line identification
 //_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF|_CRTDBG_LEAK_CHECK_DF);
 // in main, after local declarations
 //NB must be in debug build #include <crtdbg.h> 
@@ -9,9 +10,8 @@
 #include <vector> 
 #include <forward_list> 
 using namespace std;
-#include "Frame.h" 
-#include "Animation.h"
-#include "AnimationManager.h"
+
+#include "animationManager.h"
 int main(void) {
 	char response;
 	bool RUNNING = true; AnimationManager M("Manager1"); _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);

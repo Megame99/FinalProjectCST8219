@@ -24,7 +24,15 @@ frame::~frame()
 {
 }
 
-frame& frame::operator=(const frame&)
+frame& frame::operator=(const frame& f)
 {
+	//frame *f2 = new frame(f);
 	// TODO: insert return statement here
+	return (frame)f;
 }
+
+//frame& frame::operator=(const frame& f)
+//{
+//	// TODO: insert return statement here
+//
+//}

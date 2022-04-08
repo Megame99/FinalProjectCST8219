@@ -18,7 +18,7 @@ void EditFrame();
 void DeleteFrame();
 // Add a frame as in cin>>A;
 friend std::istream& operator>>(std::istream&, animation&);
-// Output the frames as in cout<<A;
+// Output the animation as in cout<<A;
 friend std::ostream& operator<<(std::ostream&, animation&);
 
 };

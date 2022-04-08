@@ -10,5 +10,5 @@ frame(char*, double);
 frame(const frame&);
 ~frame();
 frame& operator=(const frame&);
-friend std::ostream& operator << (std::ostream&, frame&);
+//friend std::ostream& operator << (std::ostream&, frame&);
 };
